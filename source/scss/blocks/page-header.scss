@@ -17,6 +17,22 @@
   @media (max-width: $mobile) and (orientation: landscape) {
     padding: 0.9rem 0;
   }
+
+  &.is-active {
+    .page-header__logo {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .page-header__nav {
+      opacity: 1;
+    }
+
+    .social-block__toggler {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 }
 
 .page-header__wrapper {
@@ -35,6 +51,10 @@
   padding: 1rem 0;
   width: 10rem;
   color: $c-light;
+
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 1s, opacity $transition;
 
   @media (min-width: $stop-scaling) {
     top: -5px;
@@ -130,6 +150,9 @@
 .page-header__nav {
   display: flex;
   align-items: center;
+
+  opacity: 0;
+  transition: 0.8s;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     position: fixed;
