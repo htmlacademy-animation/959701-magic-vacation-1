@@ -1,3 +1,5 @@
+import {initAnimationRulesPage} from "./init-animation-rules-page";
+
 const initAnimations = () => {
   const header = document.querySelector(`header`);
   const footer = document.querySelector(`.js-footer`);
@@ -6,6 +8,8 @@ const initAnimations = () => {
     header.classList.add(`is-active`);
     footer.classList.add(`is-active`);
   });
+
+  initAnimationRulesPage();
 };
 
 export {initAnimations};
