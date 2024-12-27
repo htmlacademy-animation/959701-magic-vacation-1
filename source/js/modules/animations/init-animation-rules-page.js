@@ -20,7 +20,14 @@ const initAnimationRulesPage = () => {
       });
     });
 
-    btn.style.opacity = `1`;
+    setTimeout(() => {
+      btn.style.opacity = `1`;
+
+      setTimeout(() => {
+        btn.querySelector(`.rules__link-text`).style.maxWidth = `1000px`;
+        btn.querySelector(`.rules__link-text`).style.opacity = `1`;
+      }, 100);
+    }, lists.length * delay + 1000);
   };
 
   observeClassAddition(rulesPage, `active`, animationCallback);
